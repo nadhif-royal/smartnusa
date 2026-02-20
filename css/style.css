@@ -131,6 +131,43 @@ ul { list-style: none; }
 .demo-section { padding: 80px 0; background: var(--white); }
 .demo-wrapper { position: relative; background: white; padding: 40px; border-radius: 24px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border: 1px solid #eee; max-width: 900px; margin: 0 auto; }
 .demo-badge { position: absolute; top: 20px; right: 20px; background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%); color: var(--primary); padding: 6px 16px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; display: flex; align-items: center; gap: 6px; border: 1px solid rgba(13, 109, 255, 0.1); }
+.demo-header { margin-bottom: 30px; }
+
+/* =========================================
+   TOMBOL CHATBOT NUSA AI (BARU)
+   ========================================= */
+.btn-ai-chat {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--primary) 0%, #00D4FF 100%);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(13, 109, 255, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    border: none;
+}
+.btn-ai-chat:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 212, 255, 0.5);
+    color: white;
+}
+.btn-ai-chat i {
+    font-size: 1.2rem;
+    animation: pulse-icon 2s infinite;
+}
+@keyframes pulse-icon {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); text-shadow: 0 0 10px rgba(255,255,255,0.8); }
+    100% { transform: scale(1); }
+}
+/* ========================================= */
+
 .demo-form { display: grid; grid-template-columns: 1fr 1fr 1fr auto; gap: 16px; margin-top: 30px; align-items: end; }
 .form-group label { font-weight: 600; font-size: 0.9rem; margin-bottom: 8px; display: block; }
 .form-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 10px; }
@@ -176,17 +213,8 @@ footer { background: #081020; padding: 60px 0 20px; color: #ffffff; }
 .footer-brand h4, .footer-links h5, .footer-newsletter h5 { color: #ffffff !important; font-weight: 700; margin-bottom: 20px; }
 .footer-brand p, .footer-newsletter p, .copyright p { color: #cbd5e0; font-size: 0.95rem; }
 
-/* FIX: Agar Link Footer Menurun dan Tidak Nempel */
-.footer-links a { 
-    display: block; 
-    margin-bottom: 12px; 
-    color: #cbd5e0; 
-    transition: 0.3s;
-}
-.footer-links a:hover { 
-    color: var(--primary); 
-    transform: translateX(5px);
-}
+.footer-links a { display: block; margin-bottom: 12px; color: #cbd5e0; transition: 0.3s; }
+.footer-links a:hover { color: var(--primary); transform: translateX(5px); }
 
 .copyright { border-top: 1px solid #2d3748; padding-top: 20px; display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
 .legality-info { display: flex; align-items: center; gap: 8px; color: #cbd5e0; font-size: 0.95rem; }
@@ -208,9 +236,8 @@ footer { background: #081020; padding: 60px 0 20px; color: #ffffff; }
     .hero-grid, .demo-form, .bento-grid, .collections-grid, .team-grid { grid-template-columns: 1fr; }
     .app-features-grid { grid-template-columns: 1fr; }
     
-    /* Footer Jadi Rata Tengah di HP */
     .footer-grid { grid-template-columns: 1fr; gap: 30px; text-align: center; }
-    .footer-links a:hover { transform: translateY(-2px); } /* Ubah hover effek di mobile */
+    .footer-links a:hover { transform: translateY(-2px); } 
     .legality-info { justify-content: center; margin-top: 15px; }
 
     .main-value { grid-row: auto; }
@@ -220,4 +247,5 @@ footer { background: #081020; padding: 60px 0 20px; color: #ffffff; }
     .copyright { flex-direction: column; gap: 5px; text-align: center; }
     .section-header h2 { font-size: 2rem; margin-top: 40px; line-height: 1.2; }
     .demo-badge { top: 10px; right: 10px; font-size: 0.75rem; padding: 4px 12px; }
+    .demo-header { text-align: center; }
 }
