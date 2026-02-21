@@ -134,7 +134,7 @@ ul { list-style: none; }
 .demo-header { margin-bottom: 30px; }
 
 /* =========================================
-   TOMBOL CHATBOT NUSA AI (BARU)
+   TOMBOL CHATBOT NUSA AI 
    ========================================= */
 .btn-ai-chat {
     display: inline-flex;
@@ -166,7 +166,6 @@ ul { list-style: none; }
     50% { transform: scale(1.2); text-shadow: 0 0 10px rgba(255,255,255,0.8); }
     100% { transform: scale(1); }
 }
-/* ========================================= */
 
 .demo-form { display: grid; grid-template-columns: 1fr 1fr 1fr auto; gap: 16px; margin-top: 30px; align-items: end; }
 .form-group label { font-weight: 600; font-size: 0.9rem; margin-bottom: 8px; display: block; }
@@ -182,6 +181,62 @@ ul { list-style: none; }
 .schedule-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
 .time-slot { font-size: 0.85rem; font-weight: 700; color: var(--primary); min-width: 60px; text-align: right; padding-top: 2px; }
 .activity-desc { font-size: 0.95rem; color: var(--text-dark); line-height: 1.4; }
+
+/* =========================================
+   PROTOTYPE & POSTER SECTION (BARU)
+   ========================================= */
+#prototype-section { 
+    padding: 80px 0; 
+    background: var(--bg-light); 
+    text-align: center; 
+}
+.prototype-wrapper { 
+    max-width: 1000px; 
+    margin: 0 auto; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 30px; 
+}
+.poster-img { 
+    width: 100%; 
+    height: auto; 
+    border-radius: 24px; 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
+    border: 1px solid #e2e8f0; 
+    transition: transform 0.4s ease; 
+    display: block;
+}
+.poster-img:hover { 
+    transform: scale(1.02); 
+}
+
+.btn-figma {
+    background-color: #1E1E1E; /* Warna elegan dan premium layaknya tech startup */
+    color: #FFFFFF;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    border: none;
+    text-decoration: none;
+}
+.btn-figma:hover {
+    background-color: #000000;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    color: #FFFFFF;
+}
+.btn-figma i { 
+    font-size: 1.5rem; 
+    color: #0ACF83; /* Sedikit aksen hijau Figma */
+}
+/* ========================================= */
 
 /* --- FOUNDERS TEAM --- */
 #team { padding: 80px 0; background: var(--white); }
@@ -217,8 +272,25 @@ footer { background: #081020; padding: 60px 0 20px; color: #ffffff; }
 .footer-links a:hover { color: var(--primary); transform: translateX(5px); }
 
 .copyright { border-top: 1px solid #2d3748; padding-top: 20px; display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
-.legality-info { display: flex; align-items: center; gap: 8px; color: #cbd5e0; font-size: 0.95rem; }
-.legality-info i { color: var(--primary); font-size: 1.2rem; }
+
+/* =========================================
+   FOOTER LEGALITY INFO NIB 
+   ========================================= */
+.legality-info { 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    color: #cbd5e0; 
+    font-size: 0.95rem; 
+}
+.legality-info i { 
+    color: var(--primary); 
+    font-size: 1.5rem; /* Ukuran diperbesar */
+    display: flex; 
+    align-items: center;
+    line-height: 1; /* Mencegah margin semu dari font */
+}
+/* ========================================= */
 
 .btn-contact { background-color: var(--primary); color: #fff; padding: 10px 24px; border-radius: 50px; font-size: 0.95rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; transition: all 0.3s ease; border: 1px solid var(--primary); width: auto; }
 .btn-contact:hover { background-color: transparent; color: var(--primary); transform: translateY(-2px); }
@@ -244,7 +316,9 @@ footer { background: #081020; padding: 60px 0 20px; color: #ffffff; }
     .scroll-card-sm, .scroll-card-md { flex: 0 0 85%; }
     .mobile-menu { position: fixed; top: 80px; left: 0; width: 100%; background: white; padding: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); display: none; flex-direction: column; gap: 15px; }
     .mobile-menu.active { display: flex; }
-    .copyright { flex-direction: column; gap: 5px; text-align: center; }
+    .copyright { flex-direction: column; gap: 16px; text-align: center; }
+    .social-icons { justify-content: center; }
+    
     .section-header h2 { font-size: 2rem; margin-top: 40px; line-height: 1.2; }
     .demo-badge { top: 10px; right: 10px; font-size: 0.75rem; padding: 4px 12px; }
     .demo-header { text-align: center; }
