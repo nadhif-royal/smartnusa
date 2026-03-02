@@ -50,6 +50,7 @@ ul { list-style: none; }
 .hero-visual .image-wrapper { position: relative; }
 .hero-visual img { width: 100%; border-radius: 30px; transform: rotate(2deg); box-shadow: var(--shadow-card); transition: 0.5s; }
 .hero-visual img:hover { transform: rotate(0deg); }
+
 .logo-watermark { position: absolute; bottom: 20px; right: 20px; background: rgba(255, 255, 255, 0.9); padding: 10px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); z-index: 2; }
 .logo-watermark img { width: 60px !important; height: auto !important; transform: none !important; border-radius: 0; }
 .trust-signals { margin-top: 32px; display: flex; gap: 20px; color: var(--text-grey); font-size: 0.9rem; flex-wrap: wrap; }
@@ -183,7 +184,7 @@ ul { list-style: none; }
 .activity-desc { font-size: 0.95rem; color: var(--text-dark); line-height: 1.4; }
 
 /* =========================================
-   PROTOTYPE & POSTER SECTION (BARU)
+   PROTOTYPE & POSTER SECTION
    ========================================= */
 #prototype-section { 
     padding: 80px 0; 
@@ -212,7 +213,7 @@ ul { list-style: none; }
 }
 
 .btn-figma {
-    background-color: #1E1E1E; /* Warna elegan dan premium layaknya tech startup */
+    background-color: #1E1E1E; 
     color: #FFFFFF;
     padding: 16px 32px;
     border-radius: 50px;
@@ -234,26 +235,47 @@ ul { list-style: none; }
 }
 .btn-figma i { 
     font-size: 1.5rem; 
-    color: #0ACF83; /* Sedikit aksen hijau Figma */
+    color: #0ACF83; 
 }
-/* ========================================= */
 
-/* --- FOUNDERS TEAM --- */
-#team { padding: 80px 0; background: var(--white); }
+/* =========================================
+   11. FOUNDERS TEAM (3 COLUMNS - NO GALLERY)
+   ========================================= */
+#team { padding: 80px 0; background: var(--white); overflow: hidden; }
 .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; perspective: 1000px; }
-.team-card-container { width: 100%; height: 450px; cursor: pointer; }
-.team-card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.6s; transform-style: preserve-3d; border-radius: 24px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+.team-card-container { width: 100%; height: 480px; cursor: pointer; } 
+.team-card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1); transform-style: preserve-3d; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
 .team-card-container.flipped .team-card-inner { transform: rotateY(180deg); }
 .team-card-front, .team-card-back { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: 24px; overflow: hidden; }
-.team-card-front { background: #e3f2fd; color: var(--text-dark); display: flex; flex-direction: column; align-items: center; justify-content: flex-end; }
-.team-img-wrapper { width: 100%; height: 350px; display: flex; align-items: flex-end; justify-content: center; }
-.team-img { max-height: 100%; width: auto; max-width: 90%; object-fit: contain; object-position: bottom; }
-.team-info { padding: 20px; width: 100%; background: rgba(255,255,255,0.6); backdrop-filter: blur(5px); border-top: 1px solid rgba(0,0,0,0.05); }
+.team-card-front { background: #f8fafc; color: var(--text-dark); display: flex; flex-direction: column; }
+.team-img-wrapper { width: 100%; height: 380px; overflow: hidden; background: #e3f2fd; } 
+.team-img { width: 100%; height: 100%; object-fit: cover; object-position: center 10%; transition: transform 0.5s ease; }
+.team-card-container:hover .team-img { transform: scale(1.05); } 
+.team-info { padding: 20px; width: 100%; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); flex-grow: 1; display: flex; flex-direction: column; justify-content: center; z-index: 2; position: relative; box-shadow: 0 -10px 20px rgba(0,0,0,0.03); }
 .team-info h4 { margin-bottom: 5px; font-size: 1.3rem; }
 .team-info .role { font-size: 0.95rem; color: var(--primary-dark); font-weight: 700; }
-.team-card-back { background: var(--primary); color: white; transform: rotateY(180deg); display: flex; align-items: center; justify-content: center; padding: 30px; }
-.back-content h4 { color: white; font-size: 1.2rem; margin-bottom: 15px; font-weight: 700; }
-.back-content p { font-size: 1rem; line-height: 1.5; }
+.team-card-back { background: var(--primary); color: white; transform: rotateY(180deg); display: flex; align-items: center; justify-content: center; padding: 30px; text-align: left; }
+.back-content h4 { color: white; font-size: 1.2rem; margin-bottom: 15px; font-weight: 700; line-height: 1.4; }
+.back-content p { font-size: 1rem; line-height: 1.6; opacity: 0.9; }
+
+/* === TRIO NGALAM TEXT HIGHLIGHT === */
+.highlight-trio {
+    font-weight: 800; /* Extra bold */
+    color: var(--primary); /* Warna biru utama */
+    cursor: pointer; /* Memberi petunjuk interaktif */
+    transition: all 0.3s ease;
+    padding: 4px 10px; /* Padding sedikit dilebarkan agar terlihat seperti tombol saat di-hover */
+    border-radius: 8px;
+    display: inline-block; 
+}
+
+/* Hover effect: Full Blue Background + Glow */
+.highlight-trio:hover {
+    background-color: var(--primary);
+    color: white !important; /* Paksa teks jadi putih */
+    box-shadow: 0 5px 15px rgba(13, 109, 255, 0.4); /* Efek glow */
+    transform: translateY(-2px); /* Melayang sedikit */
+}
 
 /* --- STORIES SECTION --- */
 #stories { padding: 100px 0 80px 0; background: linear-gradient(rgba(0, 10, 30, 0.4), rgba(0, 10, 30, 0.4)), url('../assets/NusaPenida.jpg'); background-size: cover; background-position: center; background-attachment: fixed; }
@@ -262,35 +284,18 @@ ul { list-style: none; }
 #stories .nav-btn { background: rgba(255, 255, 255, 0.9); border: none; }
 #stories .nav-btn:hover { background: var(--primary); color: white; }
 
-/* --- FOOTER (FIXED ALIGNMENT) --- */
+/* --- FOOTER --- */
 footer { background: #081020; padding: 60px 0 20px; color: #ffffff; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; margin-bottom: 40px; }
 .footer-brand h4, .footer-links h5, .footer-newsletter h5 { color: #ffffff !important; font-weight: 700; margin-bottom: 20px; }
 .footer-brand p, .footer-newsletter p, .copyright p { color: #cbd5e0; font-size: 0.95rem; }
-
 .footer-links a { display: block; margin-bottom: 12px; color: #cbd5e0; transition: 0.3s; }
 .footer-links a:hover { color: var(--primary); transform: translateX(5px); }
-
 .copyright { border-top: 1px solid #2d3748; padding-top: 20px; display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
 
-/* =========================================
-   FOOTER LEGALITY INFO NIB 
-   ========================================= */
-.legality-info { 
-    display: flex; 
-    align-items: center; 
-    gap: 8px; 
-    color: #cbd5e0; 
-    font-size: 0.95rem; 
-}
-.legality-info i { 
-    color: var(--primary); 
-    font-size: 1.5rem; /* Ukuran diperbesar */
-    display: flex; 
-    align-items: center;
-    line-height: 1; /* Mencegah margin semu dari font */
-}
-/* ========================================= */
+/* NIB Legalitas */
+.legality-info { display: flex; align-items: center; gap: 8px; color: #cbd5e0; font-size: 0.95rem; }
+.legality-info i { color: var(--primary); font-size: 1.8rem; display: flex; align-items: center; line-height: 0; transform: translateY(-2px); }
 
 .btn-contact { background-color: var(--primary); color: #fff; padding: 10px 24px; border-radius: 50px; font-size: 0.95rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; transition: all 0.3s ease; border: 1px solid var(--primary); width: auto; }
 .btn-contact:hover { background-color: transparent; color: var(--primary); transform: translateY(-2px); }
@@ -322,4 +327,6 @@ footer { background: #081020; padding: 60px 0 20px; color: #ffffff; }
     .section-header h2 { font-size: 2rem; margin-top: 40px; line-height: 1.2; }
     .demo-badge { top: 10px; right: 10px; font-size: 0.75rem; padding: 4px 12px; }
     .demo-header { text-align: center; }
+    
+    .team-card-container { height: 450px; }
 }
