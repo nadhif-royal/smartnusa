@@ -1,5 +1,5 @@
 /* =========================================
-   SmartNusa Design System - FINAL REBRANDED
+   SmartNusa Design System - FINAL REBRANDED V3
    ========================================= */
 
 :root {
@@ -118,15 +118,15 @@ ul { list-style: none; }
 .user-profile img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
 .stars { color: #f1c40f; font-size: 0.9rem; }
 
-/* --- APP SHOWCASE GRID FITUR (TANPA MOCKUP) --- */
+/* --- APP SHOWCASE GRID FITUR (UPDATE: 4 KOLOM UNTUK 8 FITUR) --- */
 #app-showcase { padding: 80px 0; background: var(--bg-light); }
-.app-features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+.app-features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; }
 .feature-card { padding: 30px; background: white; border-radius: 16px; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; flex-direction: column; border: 1px solid #e2e8f0; }
 .feature-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-card); border-color: var(--primary); }
 .feat-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
 .feat-head i { font-size: 36px; color: var(--primary); }
-.feat-head h3 { font-size: 1.3rem; margin: 0; }
-.feature-card p { font-size: 0.95rem; color: var(--text-grey); margin: 0; line-height: 1.5; }
+.feat-head h3 { font-size: 1.2rem; margin: 0; }
+.feature-card p { font-size: 0.9rem; color: var(--text-grey); margin: 0; line-height: 1.5; }
 
 /* --- ITINERARY DEMO --- */
 .demo-section { padding: 80px 0; background: var(--white); }
@@ -301,9 +301,14 @@ footer { background: #081020; padding: 60px 0 20px; color: #ffffff; }
 .btn-contact:hover { background-color: transparent; color: var(--primary); transform: translateY(-2px); }
 
 /* --- RESPONSIVE --- */
+@media (max-width: 1200px) {
+    .app-features-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
 @media (max-width: 992px) {
     .app-features-grid { grid-template-columns: repeat(2, 1fr); }
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {

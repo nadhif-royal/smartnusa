@@ -1,5 +1,6 @@
-/* FILE: js/main.js - FINAL SMARTNUSA (Grid Features, No Mockup) */
+/* FILE: js/main.js - FINAL STABLE V11 (With Preloader & NusaEco) */
 
+// --- 1. GLOBAL HELPER FUNCTIONS ---
 window.scrollContainer = function(containerId, scrollAmount) {
     const container = document.getElementById(containerId);
     if (container) {
@@ -7,8 +8,15 @@ window.scrollContainer = function(containerId, scrollAmount) {
     }
 };
 
+window.switchFeature = function(element, featureId) {
+    const allItems = document.querySelectorAll('.feature-item');
+    allItems.forEach(item => { item.classList.remove('active'); });
+    if (element) { element.classList.add('active'); }
+};
+
+// --- 2. MAIN LOGIC ---
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("SmartNusa JS Loaded.");
+    console.log("NusaPath JS Loaded.");
 
     // A. Navbar Sticky
     const navbar = document.getElementById('navbar');
@@ -41,7 +49,77 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // C. Itinerary Generator Logic
+    // C. MOCKUP SLIDESHOW (SMOOTH PRELOADER FIX)
+    const sliderImg = document.getElementById('mockup-slider');
+    
+    // Daftar Frame Lengkap
+    const frames = [
+        'assets/FrameSplashScreen.png', 
+        'assets/FrameSplashScreen2.png',
+        'assets/FrameDashboard.png', 
+        'assets/FrameNusaAI.png',
+        'assets/FrameNusaAI2.png',
+        'assets/FrameSmartItinerary.png',
+        'assets/FrameAboutItinerary.png',
+        'assets/FrameChatBot.png',
+        'assets/FrameNusaTrip.png', 
+        'assets/FrameTravelMate.png',
+        'assets/FrameNusaSOS.png',
+        'assets/FrameNusaPoints.png',
+        'assets/FrameNusaEco.png'
+    ];
+
+    // Fungsi Preload agar gambar sudah tersimpan di cache browser
+    function preloadImages(imageArray) {
+        imageArray.forEach((src) => {
+            const img = new Image();
+            img.src = src;
+        });
+    }
+
+    // Jalankan preload segera
+    preloadImages(frames);
+
+    let currentFrameIndex = 0;
+    
+    if(sliderImg) {
+        setInterval(() => {
+            // 1. Mulai Fade Out (Hilang pelan-pelan)
+            sliderImg.classList.add('fade-out'); 
+
+            // 2. Tunggu transisi CSS selesai (500ms) baru ganti sumber gambar
+            setTimeout(() => {
+                currentFrameIndex = (currentFrameIndex + 1) % frames.length;
+                const nextImageSrc = frames[currentFrameIndex];
+
+                // Teknik Double Check:
+                const tempLoader = new Image();
+                
+                tempLoader.onload = () => {
+                    // Hanya ganti src jika gambar sudah selesai loading di memori
+                    sliderImg.src = nextImageSrc;
+                    
+                    // Hapus class fade-out (Muncul pelan-pelan)
+                    sliderImg.classList.remove('fade-out');
+                };
+
+                // Mulai load gambar target
+                tempLoader.src = nextImageSrc;
+
+                // Fallback Safety: Jika dalam 2 detik loading macet, paksa munculkan
+                setTimeout(() => {
+                    if (sliderImg.classList.contains('fade-out')) {
+                        sliderImg.src = nextImageSrc; 
+                        sliderImg.classList.remove('fade-out');
+                    }
+                }, 2000);
+
+            }, 500); 
+            
+        }, 3500); // Interval total 3.5 detik
+    }
+
+    // D. Itinerary Generator Logic
     const demoForm = document.getElementById('itinerary-form');
     const resultDiv = document.getElementById('demo-result');
     const timelineContainer = document.getElementById('timeline-container');
@@ -85,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// --- DATABASE ITINERARY ---
+// --- 3. DATABASE ITINERARY (DATA TETAP SAMA) ---
 function generateSmartTimeline(location, days, budget) {
     const db = {
         'Bali': {
@@ -307,6 +385,7 @@ function generateSmartTimeline(location, days, budget) {
     for(let i = 0; i < days; i++) {
         let dailyActs = budgetData[i];
         
+        // Fallback for missing days
         if (!dailyActs) {
             dailyActs = [
                 {t:"09:00", a:"Free Leisure Time / Shopping"}, 
@@ -333,4 +412,5 @@ function generateSmartTimeline(location, days, budget) {
     }
 
     return scheduleHTML;
+}
 }
