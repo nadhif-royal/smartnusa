@@ -1,5 +1,5 @@
 /* =========================================
-   SmartNusa Design System - FINAL REBRANDED V3
+   SmartNusa Design System - FINAL REBRANDED V6
    ========================================= */
 
 :root {
@@ -28,7 +28,7 @@ ul { list-style: none; }
 .btn-primary { background-color: var(--primary); color: white; box-shadow: 0 4px 15px rgba(13, 109, 255, 0.3); }
 .btn-primary:hover { background-color: var(--primary-dark); transform: translateY(-2px); }
 .btn-outline { border: 2px solid var(--primary-dark); color: var(--primary-dark); background: transparent; }
-.btn-outline:hover { background: var(--bg-light); }
+.btn-outline:hover { background: var(--bg-light); transform: translateY(-3px); box-shadow: 0 5px 15px rgba(10, 82, 191, 0.15); }
 .btn-sm { padding: 8px 16px; font-size: 0.85rem; border-radius: 8px; }
 .btn-white { background: white; color: var(--text-dark); border: none; }
 .btn-white:hover { background: var(--bg-light); color: var(--primary); }
@@ -101,14 +101,17 @@ ul { list-style: none; }
 .section-header h2 { font-size: 3rem; font-weight: 800; margin-bottom: 16px; letter-spacing: -1px; color: #000; }
 .section-header p { font-size: 1.2rem; color: var(--text-grey); }
 .slider-nav-center { display: flex; gap: 12px; justify-content: center; margin-top: 40px; }
-.nav-btn { width: 44px; height: 44px; border-radius: 50%; border: 1px solid #ddd; background: white; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.3s; font-size: 1.2rem; }
+.nav-btn { width: 44px; height: 44px; border-radius: 50%; border: 1px solid #ddd; background: white; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.3s; font-size: 1.2rem; z-index: 10; position: relative; }
 .nav-btn:hover { background: var(--primary); color: white; border-color: var(--primary); }
-.scrolling-wrapper { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 30px; padding-bottom: 20px; -webkit-overflow-scrolling: touch; scroll-behavior: smooth; }
+
+/* SCROLL CSS FIXED */
+.scrolling-wrapper { display: flex; overflow-x: auto; gap: 30px; padding-bottom: 20px; -webkit-overflow-scrolling: touch; scroll-behavior: smooth; }
 .scrolling-wrapper::-webkit-scrollbar { height: 8px; }
 .scrolling-wrapper::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
 .scrolling-wrapper::-webkit-scrollbar-track { background: transparent; }
-.scroll-card-sm { flex: 0 0 280px; scroll-snap-align: start; }
-.scroll-card-md { flex: 0 0 380px; scroll-snap-align: start; }
+.scroll-card-sm { flex: 0 0 280px; }
+.scroll-card-md { flex: 0 0 380px; }
+
 .dest-card, .story-card { background: white; border: 1px solid #eee; border-radius: 20px; overflow: hidden; transition: 0.3s; height: 100%; display: flex; flex-direction: column;}
 .dest-card:hover, .story-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-card); }
 .dest-card img, .story-img img { width: 100%; height: 240px; object-fit: cover; }
@@ -118,7 +121,7 @@ ul { list-style: none; }
 .user-profile img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
 .stars { color: #f1c40f; font-size: 0.9rem; }
 
-/* --- APP SHOWCASE GRID FITUR (UPDATE: 4 KOLOM UNTUK 8 FITUR) --- */
+/* --- APP SHOWCASE GRID FITUR --- */
 #app-showcase { padding: 80px 0; background: var(--bg-light); }
 .app-features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; }
 .feature-card { padding: 30px; background: white; border-radius: 16px; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; flex-direction: column; border: 1px solid #e2e8f0; }
@@ -239,7 +242,7 @@ ul { list-style: none; }
 }
 
 /* =========================================
-   11. FOUNDERS TEAM (3 COLUMNS - NO GALLERY)
+   11. FOUNDERS TEAM 
    ========================================= */
 #team { padding: 80px 0; background: var(--white); overflow: hidden; }
 .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; perspective: 1000px; }
@@ -260,21 +263,19 @@ ul { list-style: none; }
 
 /* === TRIO NGALAM TEXT HIGHLIGHT === */
 .highlight-trio {
-    font-weight: 800; /* Extra bold */
-    color: var(--primary); /* Warna biru utama */
-    cursor: pointer; /* Memberi petunjuk interaktif */
+    font-weight: 800; 
+    color: var(--primary); 
+    cursor: pointer; 
     transition: all 0.3s ease;
-    padding: 4px 10px; /* Padding sedikit dilebarkan agar terlihat seperti tombol saat di-hover */
+    padding: 4px 10px; 
     border-radius: 8px;
     display: inline-block; 
 }
-
-/* Hover effect: Full Blue Background + Glow */
 .highlight-trio:hover {
     background-color: var(--primary);
-    color: white !important; /* Paksa teks jadi putih */
-    box-shadow: 0 5px 15px rgba(13, 109, 255, 0.4); /* Efek glow */
-    transform: translateY(-2px); /* Melayang sedikit */
+    color: white !important; 
+    box-shadow: 0 5px 15px rgba(13, 109, 255, 0.4); 
+    transform: translateY(-2px); 
 }
 
 /* --- STORIES SECTION --- */
@@ -284,11 +285,12 @@ ul { list-style: none; }
 #stories .nav-btn { background: rgba(255, 255, 255, 0.9); border: none; }
 #stories .nav-btn:hover { background: var(--primary); color: white; }
 
-/* --- FOOTER --- */
+/* --- 13. FOOTER --- */
 footer { background: #081020; padding: 60px 0 20px; color: #ffffff; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; margin-bottom: 40px; }
 .footer-brand h4, .footer-links h5, .footer-newsletter h5 { color: #ffffff !important; font-weight: 700; margin-bottom: 20px; }
-.footer-brand p, .footer-newsletter p, .copyright p { color: #cbd5e0; font-size: 0.95rem; }
+.footer-brand p, .copyright p { color: #cbd5e0; font-size: 0.95rem; }
+
 .footer-links a { display: block; margin-bottom: 12px; color: #cbd5e0; transition: 0.3s; }
 .footer-links a:hover { color: var(--primary); transform: translateX(5px); }
 .copyright { border-top: 1px solid #2d3748; padding-top: 20px; display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
@@ -297,8 +299,43 @@ footer { background: #081020; padding: 60px 0 20px; color: #ffffff; }
 .legality-info { display: flex; align-items: center; gap: 8px; color: #cbd5e0; font-size: 0.95rem; }
 .legality-info i { color: var(--primary); font-size: 1.8rem; display: flex; align-items: center; line-height: 0; transform: translateY(-2px); }
 
-.btn-contact { background-color: var(--primary); color: #fff; padding: 10px 24px; border-radius: 50px; font-size: 0.95rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; transition: all 0.3s ease; border: 1px solid var(--primary); width: auto; }
-.btn-contact:hover { background-color: transparent; color: var(--primary); transform: translateY(-2px); }
+/* --- FOOTER SOCIAL ICONS --- */
+.social-icons { display: flex; gap: 16px; font-size: 24px; color: var(--primary); }
+.social-icons a { display: inline-block; transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.social-icons a:hover { 
+    color: #00D4FF; 
+    transform: translateY(-4px) scale(1.1); 
+    filter: drop-shadow(0 5px 10px rgba(0, 212, 255, 0.4)); 
+}
+
+/* --- FOOTER CONTACT US BUTTON --- */
+.footer-newsletter p { 
+    color: #cbd5e0; 
+    font-size: 0.95rem; 
+    margin-bottom: 20px; 
+}
+.btn-contact { 
+    background-color: var(--primary); 
+    color: #fff; 
+    padding: 10px 24px; 
+    border-radius: 50px; 
+    font-size: 0.95rem; 
+    font-weight: 600; 
+    text-decoration: none; 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 8px; 
+    transition: all 0.3s ease; 
+    border: 1px solid var(--primary); 
+    width: auto; 
+    margin-top: 0; 
+}
+.btn-contact:hover { 
+    background-color: transparent; 
+    color: var(--primary); 
+    transform: translateY(-3px); 
+    box-shadow: 0 4px 15px rgba(13, 109, 255, 0.2); 
+}
 
 /* --- RESPONSIVE --- */
 @media (max-width: 1200px) {

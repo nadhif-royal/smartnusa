@@ -1,4 +1,4 @@
-/* FILE: js/main.js - FINAL STABLE V11 (With Preloader & NusaEco) */
+/* FILE: js/main.js - FINAL STABLE V12 (FIXED BUG) */
 
 // --- 1. GLOBAL HELPER FUNCTIONS ---
 window.scrollContainer = function(containerId, scrollAmount) {
@@ -16,7 +16,7 @@ window.switchFeature = function(element, featureId) {
 
 // --- 2. MAIN LOGIC ---
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("NusaPath JS Loaded.");
+    console.log("SmartNusa JS Loaded.");
 
     // A. Navbar Sticky
     const navbar = document.getElementById('navbar');
@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// --- 3. DATABASE ITINERARY (DATA TETAP SAMA) ---
+// --- 3. DATABASE ITINERARY ---
 function generateSmartTimeline(location, days, budget) {
     const db = {
         'Bali': {
@@ -412,5 +412,4 @@ function generateSmartTimeline(location, days, budget) {
     }
 
     return scheduleHTML;
-}
 }
