@@ -11,12 +11,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header id="navbar">
+    <header id="navbar" data-aos="fade-down" data-aos-duration="800">
         <div class="container nav-container">
             <div class="logo">
                 <img src="assets/Logo SmartNusa.png" alt="SmartNusa Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
@@ -49,25 +51,25 @@
 
     <section id="hero">
         <div class="container hero-grid">
-            <div class="hero-content">
+            <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
                 <span class="tagline-pill">Discover the Real Indonesia</span>
                 <h1>Discover Authentic Indonesia — One Smart Itinerary at a Time.</h1>
                 
                 <p><strong>SmartNusa is your all-in-one travel solution.</strong> We combine AI technology + verified local experts to craft personalised, safe, and culture-rich trips. Book packages, local guides, and photographers in one platform.</p>
                 
-                <div class="cta-group">
+                <div class="cta-group" data-aos="fade-up" data-aos-delay="200">
                     <a href="#demo" class="btn btn-primary">Plan My Trip</a>
                     <a href="#collections" class="btn btn-outline">Explore Collections</a>
                 </div>
 
-                <div class="trust-signals">
+                <div class="trust-signals" data-aos="fade-up" data-aos-delay="400">
                     <span><i class="ph-fill ph-shield-check"></i> Secure Escrow</span>
                     <span><i class="ph-fill ph-seal-check"></i> Verified Locals</span>
                     <span><i class="ph-fill ph-lifebuoy"></i> 24/7 Nusa Guard</span>
                 </div>
             </div>
 
-            <div class="hero-visual">
+            <div class="hero-visual" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
                 <div class="image-wrapper">
                     <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1000&auto=format&fit=crop" alt="Bali Authentic Travel">
                     <div class="logo-watermark">
@@ -80,7 +82,7 @@
 
     <section id="experience">
         <div class="container">
-            <div class="video-frame">
+            <div class="video-frame" data-aos="zoom-in" data-aos-duration="1200">
                 <div class="video-overlay">
                     <h2>Experience the Magic</h2>
                     <p>See how SmartNusa unlocks the hidden gems of Indonesia.</p>
@@ -95,22 +97,22 @@
 
     <section id="how-it-works">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up">
                 <h2>Seamless Journey</h2>
                 <p>From planning to traveling, we've got you covered.</p>
             </div>
             <div class="steps-grid">
-                <div class="step-card">
+                <div class="step-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="icon-box"><i class="ph ph-sparkle"></i></div>
                     <h3>1. AI Drafting</h3>
                     <p>Tell Nusa AI your budget & interests. Get a personalized plan with crowd predictions in seconds.</p>
                 </div>
-                <div class="step-card">
+                <div class="step-card" data-aos="fade-up" data-aos-delay="250">
                     <div class="icon-box"><i class="ph ph-user-check"></i></div>
                     <h3>2. Expert Verification</h3>
                     <p>Local guides review your route to ensure it's feasible and authentic (HITL).</p>
                 </div>
-                <div class="step-card">
+                <div class="step-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="icon-box"><i class="ph ph-shield-check"></i></div>
                     <h3>3. Secure Travel</h3>
                     <p>Book via NusaGo with escrow protection and travel safely with Nusa Guard weather alerts.</p>
@@ -121,12 +123,12 @@
 
     <section id="impact">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up">
                 <h2>Why Choose SmartNusa?</h2>
                 <p>More than just an app. We are a smart travel ecosystem.</p>
             </div>
             <div class="bento-grid">
-                <div class="bento-item main-value">
+                <div class="bento-item main-value" data-aos="fade-right" data-aos-delay="100">
                     <div class="bento-content">
                         <h3><i class="ph-fill ph-brain"></i> AI + Human Touch</h3>
                         <p>Unlike standard AI, our <strong>Human-in-the-Loop</strong> system ensures every itinerary is verified by real local experts. No more invalid routes.</p>
@@ -134,19 +136,19 @@
                     <img src="https://www.yomu.ai/images/blog-images/writing/ai-human-content-creation.webp" alt="AI Human Collaboration">
                 </div>
 
-                <div class="bento-item safety">
+                <div class="bento-item safety" data-aos="fade-left" data-aos-delay="200">
                     <i class="ph-fill ph-siren"></i>
                     <h3>Nusa Guard</h3>
                     <p>Integrated with BMKG API for real-time weather predictions, disaster alerts, GPS tracking, and safe routing.</p>
                 </div>
 
-                <div class="bento-item impact">
+                <div class="bento-item impact" data-aos="fade-left" data-aos-delay="300">
                     <i class="ph-fill ph-storefront"></i>
                     <h3>Empowering Locals</h3>
-                    <p>We open economic opportunities for local guides, photographers, UMKM, and transport providers (e.g., Bromo Jeep drivers).</p>
+                    <p>We open economic opportunities for local guides, photographers, UMKM, and transport providers.</p>
                 </div>
 
-                <div class="bento-item ecosystem">
+                <div class="bento-item ecosystem" data-aos="fade-up" data-aos-delay="400">
                     <h3>The Complete Ecosystem</h3>
                     <ul>
                         <li><i class="ph-bold ph-check-circle"></i> <strong>NusaGo:</strong> Transparent Booking</li>
@@ -155,7 +157,7 @@
                     </ul>
                 </div>
 
-                <div class="bento-item eco">
+                <div class="bento-item eco" data-aos="fade-up" data-aos-delay="500">
                     <i class="ph-fill ph-leaf"></i>
                     <h3>NusaGreen</h3>
                     <p>Travel sustainably with carbon footprint tracking and eco-friendly route recommendations.</p>
@@ -166,12 +168,12 @@
 
     <section id="collections">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up">
                 <h2>Curated Collections</h2>
                 <p>Start your journey by exploring our featured regions.</p>
             </div>
             <div class="collections-grid">
-                <div class="collection-card">
+                <div class="collection-card" data-aos="zoom-in-right" data-aos-delay="100">
                     <img src="assets/Explore Java.png" alt="Explore Java" onerror="this.src='https://placehold.co/800x450?text=Check+Explore+Java.png'">
                     <div class="col-overlay">
                         <h3>Explore Java</h3>
@@ -179,7 +181,7 @@
                         <a href="#demo" class="btn btn-sm btn-white">View Itineraries</a>
                     </div>
                 </div>
-                <div class="collection-card">
+                <div class="collection-card" data-aos="zoom-in-left" data-aos-delay="300">
                     <img src="assets/Explore Bali.png" alt="Explore Bali" onerror="this.src='https://placehold.co/800x450?text=Check+Explore+Bali.png'">
                     <div class="col-overlay">
                         <h3>Explore Bali</h3>
@@ -193,7 +195,7 @@
 
     <section id="destinations">
         <div class="container">
-            <div class="section-header auth-gems-header">
+            <div class="section-header auth-gems-header" data-aos="fade-up">
                 <h2>Explore Authentic Gems</h2>
                 <p>From the sunrise of Bromo to the dolphins of Lovina.</p>
                 <div class="slider-nav-center">
@@ -202,7 +204,7 @@
                 </div>
             </div>
             
-            <div class="scrolling-wrapper" id="dest-container">
+            <div class="scrolling-wrapper" id="dest-container" data-aos="fade-up" data-aos-delay="200">
                 <div class="dest-card scroll-card-sm">
                     <img src="assets/MountBromo.jpg" alt="Mount Bromo" onerror="this.src='https://placehold.co/600x400'">
                     <div class="dest-info">
@@ -257,41 +259,41 @@
 
     <section id="app-showcase">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up">
                 <h2>All-in-One Travel Companion</h2>
                 <p>Everything you need for a safe, smart, and memorable journey.</p>
             </div>
             
             <div class="app-features-grid">
-                <div class="feature-card">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="feat-head"><i class="ph ph-robot"></i> <h3>Nusa AI</h3></div>
                     <p>Smart chatbot & itinerary builder with <strong>AI Tourism Demand Prediction</strong> to forecast crowds and provide capacity warnings.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="feat-head"><i class="ph ph-suitcase-rolling"></i> <h3>NusaGo</h3></div>
                     <p>Book <strong>verified tour packages</strong> with transparent pricing, receiving <strong>direct capacity & warning alerts</strong> from Nusa AI.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="feat-head"><i class="ph ph-users"></i> <h3>Nusa Buddy</h3></div>
-                    <p>Hire <strong>local photographers</strong>, <strong>certified guides</strong>, and <strong>transport providers</strong> (e.g., Jeeps for Bromo & Wonosari) directly.</p>
+                    <p>Hire <strong>local photographers</strong>, <strong>certified guides</strong>, and <strong>transport providers</strong> (e.g., Jeeps for Bromo) directly.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="feat-head"><i class="ph ph-t-shirt" style="color: #e84393;"></i> <h3>Nusa Outfit Match</h3></div>
                     <p><strong>AI recommends the perfect outfit</strong> tailored to your destination's vibe and background for <strong>aesthetic photos</strong>.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="feat-head"><i class="ph ph-newspaper"></i> <h3>NusaInfo</h3></div>
                     <p>Latest <strong>local event news</strong> like cultural festivals (e.g., Grama Tirta in Toyomarto) & <strong>exclusive hidden gems</strong>.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="feat-head"><i class="ph ph-siren" style="color: #ff4757;"></i> <h3>Nusa Guard</h3></div>
                     <p><strong>Emergency button</strong> and <strong>BMKG API integration</strong> for real-time weather predictions and <strong>disaster alerts</strong>.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="feat-head"><i class="ph ph-leaf" style="color: #27ae60;"></i> <h3>NusaGreen</h3></div>
                     <p>Travel responsibly with <strong>low-emission routes</strong> and real-time <strong>eco-friendly footprint tracking</strong>.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="feat-head"><i class="ph ph-coins" style="color: #f1c40f;"></i> <h3>NusaPoints</h3></div>
                     <p><strong>Gamification system</strong> that rewards you with points for your bookings and <strong>sustainable travel choices</strong>.</p>
                 </div>
@@ -301,7 +303,7 @@
 
     <section id="demo" class="demo-section">
         <div class="container">
-            <div class="demo-wrapper">
+            <div class="demo-wrapper" data-aos="zoom-in" data-aos-duration="1000">
                 <div class="demo-badge">
                     <i class="ph-fill ph-sparkle"></i> Powered by Nusa AI
                 </div>
@@ -358,12 +360,12 @@
 
     <section id="prototype-section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up">
                 <h2>Experience SmartNusa</h2>
                 <p>Take a closer look at our application interface and interactive design.</p>
             </div>
             
-            <div class="prototype-wrapper">
+            <div class="prototype-wrapper" data-aos="fade-up" data-aos-delay="200">
                 <img src="assets/Poster%20SmartNusa%201.png" alt="SmartNusa App Prototype" class="poster-img" onerror="this.src='https://placehold.co/1920x1080/0D6DFF/FFFFFF?text=Poster+SmartNusa+1'">
                 
                 <div class="prototype-action">
@@ -377,13 +379,13 @@
 
     <section id="team">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up">
                 <h2>Meet The Founders</h2>
                 <p>The visionaries behind SmartNusa (<span class="highlight-trio">Trio Ngalam</span>). Click card to learn more.</p>
             </div>
             
             <div class="team-grid">
-                <div class="team-card-container" onclick="this.classList.toggle('flipped')">
+                <div class="team-card-container" onclick="this.classList.toggle('flipped')" data-aos="flip-left" data-aos-delay="100">
                     <div class="team-card-inner">
                         <div class="team-card-front">
                             <div class="team-img-wrapper">
@@ -403,7 +405,7 @@
                     </div>
                 </div>
 
-                <div class="team-card-container" onclick="this.classList.toggle('flipped')">
+                <div class="team-card-container" onclick="this.classList.toggle('flipped')" data-aos="flip-left" data-aos-delay="300">
                     <div class="team-card-inner">
                         <div class="team-card-front">
                             <div class="team-img-wrapper">
@@ -423,7 +425,7 @@
                     </div>
                 </div>
 
-                <div class="team-card-container" onclick="this.classList.toggle('flipped')">
+                <div class="team-card-container" onclick="this.classList.toggle('flipped')" data-aos="flip-left" data-aos-delay="500">
                     <div class="team-card-inner">
                         <div class="team-card-front">
                             <div class="team-img-wrapper">
@@ -449,7 +451,7 @@
 
     <section id="stories">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up">
                 <h2>Traveler Stories</h2>
                 <p>Real experiences from real people.</p>
                 <div class="slider-nav-center">
@@ -458,7 +460,7 @@
                 </div>
             </div>
             
-            <div class="scrolling-wrapper" id="stories-container">
+            <div class="scrolling-wrapper" id="stories-container" data-aos="fade-up" data-aos-delay="200">
                 <div class="story-card scroll-card-md">
                     <div class="story-img">
                         <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=600" alt="Sarah">
@@ -527,7 +529,7 @@
         </div>
     </section>
 
-    <footer>
+    <footer data-aos="fade-up" data-aos-duration="1000">
         <div class="container footer-grid">
             <div class="footer-brand">
                 <img src="assets/Logo SmartNusa.png" alt="SmartNusa" style="height: 32px; margin-bottom: 1rem;" onerror="this.style.display='none';">
@@ -563,13 +565,14 @@
                 <span>Registered NIB: <strong>0401260002686</strong></span>
             </div>
             
-            <div class="social-icons">
+            <div class="social-icons" style="display: flex; gap: 16px; font-size: 24px; color: var(--primary);">
                 <a href="https://www.instagram.com/smart.nusa/" target="_blank"><i class="ph-fill ph-instagram-logo"></i></a>
                 <a href="mailto:smartnusaid@gmail.com"><i class="ph-fill ph-envelope"></i></a>
             </div>
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

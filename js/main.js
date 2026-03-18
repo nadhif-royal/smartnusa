@@ -1,4 +1,4 @@
-/* FILE: js/main.js - FINAL SMARTNUSA (Ultra-Detailed 7-Days Itinerary) */
+/* FILE: js/main.js - FINAL SMARTNUSA (With AOS Animation) */
 
 // --- 1. GLOBAL HELPER FUNCTIONS ---
 window.scrollContainer = function(containerId, scrollAmount) {
@@ -17,6 +17,16 @@ window.switchFeature = function(element, featureId) {
 // --- 2. MAIN LOGIC ---
 document.addEventListener('DOMContentLoaded', () => {
     console.log("SmartNusa JS Loaded.");
+
+    // Initialize AOS Animation
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800, // durasi animasi 0.8 detik
+            easing: 'ease-out-cubic', // gaya animasi yang mulus
+            once: true, // animasi hanya berjalan sekali saat di-scroll ke bawah
+            offset: 100 // jarak elemen dari bawah layar sebelum animasi dimulai
+        });
+    }
 
     // A. Navbar Sticky
     const navbar = document.getElementById('navbar');
