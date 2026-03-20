@@ -52,10 +52,31 @@
     <section id="hero">
         <div class="container hero-grid">
             <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
-                <span class="tagline-pill">Discover the Real Indonesia</span>
+                <span class="tagline-pill">Discover The Real Indonesia</span>
                 <h1>Discover Authentic Indonesia — One Smart Itinerary at a Time.</h1>
                 
-                <p><strong>SmartNusa is your all-in-one travel solution.</strong> We combine AI technology + verified local experts to craft personalised, safe, and culture-rich trips. Book packages, local guides, and photographers in one platform.</p>
+                <p style="margin-bottom: 16px;">
+    <strong>SmartNusa</strong> is a pioneering <strong>Social Impact Technology</strong> ecosystem that elevates the standard all-in-one travel app with AI-driven <strong>smart itineraries</strong>.
+</p>
+
+<ul style="color: var(--text-grey); font-size: 1.1rem; margin-bottom: 24px; padding-left: 0; list-style: none;">
+    <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;">
+        <i class="ph-fill ph-check-circle" style="color: var(--primary); font-size: 1.4rem; margin-top: 3px;"></i>
+        <span><strong>AI + Human-in-the-Loop:</strong> Verified local experts validate your route for a hallucination-free journey.</span>
+    </li>
+    <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;">
+        <i class="ph-fill ph-check-circle" style="color: var(--primary); font-size: 1.4rem; margin-top: 3px;"></i>
+        <span><strong>Grassroots Empowerment:</strong> Direct bookings to support local guides, UMKM, and sustainable tourism.</span>
+    </li>
+    <li style="display: flex; align-items: flex-start; gap: 10px;">
+        <i class="ph-fill ph-check-circle" style="color: var(--primary); font-size: 1.4rem; margin-top: 3px;"></i>
+        <span><strong>Ultimate Safety:</strong> Travel with peace of mind via <strong>Nusa Guard's</strong> real-time BMKG disaster alerts.</span>
+    </li>
+</ul>
+
+<p>
+    Experience the real Indonesia, safely and impactfully.
+</p>
                 
                 <div class="cta-group" data-aos="fade-up" data-aos-delay="200">
                     <a href="#demo" class="btn btn-primary">Plan My Trip</a>
@@ -80,20 +101,23 @@
         </div>
     </section>
 
-    <section id="experience">
+    <section id="experience" data-aos="fade-up">
         <div class="container">
+            <div class="section-header">
+                <h2>Experience the Magic</h2>
+                <p>A journey where AI precision meets local wisdom, crafting unforgettable stories at every step.</p>
+            </div>
+
             <div class="video-frame" data-aos="zoom-in" data-aos-duration="1200">
-                <div class="video-overlay">
-                    <h2>Experience the Magic</h2>
-                    <p>See how SmartNusa unlocks the hidden gems of Indonesia.</p>
-                </div>
                 <video controls autoplay loop muted playsinline poster="assets/Explore Bali.png">
-                    <source src="assets/OpeningBali.mp4" type="video/mp4">
+                    <source src="assets/Explore Java.png" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
         </div>
     </section>
+
+    
 
     <section id="how-it-works">
         <div class="container">
@@ -574,5 +598,11 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
+
+    <div id="imagePopup" class="image-popup-overlay">
+        <span class="popup-close">&times;</span>
+        <img src="" alt="Popup Image" class="popup-content">
+    </div>
+    
 </body>
 </html>

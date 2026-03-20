@@ -4,7 +4,21 @@
 window.scrollContainer = function(containerId, scrollAmount) {
     const container = document.getElementById(containerId);
     if (container) {
-        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        // Ambil elemen kartu pertama untuk mengukur lebarnya secara dinamis
+        const firstCard = container.firstElementChild;
+        if (firstCard) {
+            // Hitung lebar kartu asli di layar + jarak gap (30px)
+            const gap = parseInt(window.getComputedStyle(container).gap) || 30;
+            const dynamicScrollAmount = firstCard.offsetWidth + gap;
+
+            // Cek arah geser: jika angka aslinya negatif (-), berarti geser ke kiri
+            const direction = scrollAmount < 0 ? -1 : 1;
+
+            // Geser persis sejauh 1 kartu
+            container.scrollBy({ left: dynamicScrollAmount * direction, behavior: 'smooth' });
+        } else {
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
     }
 };
 
@@ -417,3 +431,60 @@ function generateSmartTimeline(location, days, budget) {
 
     return scheduleHTML;
 }
+
+// =========================================
+// LOGIKA POP-UP GAMBAR (LIGHTBOX) GENERAL UPDATE
+// =========================================
+document.addEventListener('DOMContentLoaded', () => {
+    // Definisi elemen DOM
+    const collectionCards = document.querySelectorAll('.collection-card');
+    const popupOverlay = document.getElementById('imagePopup');
+    const popupImage = document.querySelector('.popup-content');
+    const closeBtn = document.querySelector('.popup-close');
+    const bodyDom = document.body;
+
+    // Fungsi membuka pop-up (Menggunakan Flexbox)
+    const openPopup = (imgUrl, imgAlt) => {
+        if (!popupOverlay || !popupImage) return;
+        popupOverlay.style.display = "flex"; // Paksa ke Flex untuk centering
+        popupImage.src = imgUrl; // Salin URL gambar yang diklik
+        popupImage.alt = imgAlt || "Enlarged Image";
+        bodyDom.classList.add('popup-open'); // Lock scroll halaman utama
+    };
+
+    // Fungsi menutup pop-up
+    const closePopup = () => {
+        if (!popupOverlay) return;
+        popupOverlay.style.display = "none";
+        bodyDom.classList.remove('popup-open'); // Buka scroll
+    };
+
+    // 1. Event klik pada setiap kartu koleksi
+    collectionCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const imgInside = card.querySelector('img');
+            if (imgInside) {
+                // Ambil sumber gambar dan buka pop-up
+                openPopup(imgInside.src, imgInside.alt);
+            }
+        });
+    });
+
+    // 2. Event tutup via tombol 'X'
+    if (closeBtn) closeBtn.addEventListener('click', closePopup);
+    
+    // 3. Event tutup via klik di luar area gambar
+    if (popupOverlay) {
+        popupOverlay.addEventListener('click', (event) => {
+            // Tutup jika yang diklik adalah background overlay, bukan gambarnya
+            if (event.target === popupOverlay) closePopup();
+        });
+    }
+
+    // 4. Event tutup via tombol ESC keyboard
+    document.addEventListener('keydown', (event) => {
+        if (event.key === "Escape" && popupOverlay.style.display === "flex") {
+            closePopup();
+        }
+    });
+});
