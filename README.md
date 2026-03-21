@@ -67,7 +67,7 @@ To run this project locally on your machine:
     cd smartnusa
     ```
 3.  Open `index.html` in your preferred web browser. No local server is strictly required, but using an extension like VS Code's "Live Server" is recommended for the best experience.
-
+````
 -----
 
 ## 📄 License
