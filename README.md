@@ -77,4 +77,3 @@ This project is licensed under the MIT License - see the [LICENSE](https://www.g
 -----
 
 *Built with ❤️ for Indonesia.*
-* Anda bisa langsung mengedit file `README.md` langsung dari GitHub (klik tombol bergambar pensil seperti di *screenshot*) atau mengeditnya di VS Code lalu melakukan *commit* dan *push*.
