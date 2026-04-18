@@ -4,7 +4,7 @@
 
 SmartNusa is more than just an all-in-one travel app; it is a pioneering **Social Impact Technology** ecosystem that elevates the standard travel experience with AI-driven smart itineraries. We empower local communities, ensure traveler safety, and promote sustainable tourism across Indonesia.
 
-🌐 **Live Demo:** [Visit SmartNusa Website](https://nadhif-royal.github.io/smartnusa/) *(Update link ini jika ada)*
+🌐 **Live Demo:** https://smartnusa.vercel.app/
 
 ---
 
