@@ -111,7 +111,8 @@
             </div>
 
             <div class="video-frame" data-aos="zoom-in" data-aos-duration="1200">
-                <video controls autoplay loop muted playsinline poster="assets/Explore Bali.png">
+                <video controls autoplay loop muted playsinline preload="metadata" poster="assets/Explore Bali.png">
+                    <source src="assets/OpeningBali.webm" type="video/webm">
                     <source src="assets/OpeningBali.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -407,7 +408,7 @@
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2>Meet The Founders</h2>
-                <p>The visionaries behind SmartNusa (<span class="highlight-trio">Trio Ngalam</span>). Click card to learn more.</p>
+                <p>The visionaries behind SmartNusa. Click card to learn more.</p>
             </div>
             
             <div class="team-grid">
@@ -466,6 +467,26 @@
                             <div class="back-content">
                                 <h4>Dyandra Aurellia Agata Fitri (CTO)</h4>
                                 <p>Fully responsible for product development, AI technology, and platform architecture.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card-container" onclick="this.classList.toggle('flipped')" data-aos="flip-left" data-aos-delay="700">
+                    <div class="team-card-inner">
+                        <div class="team-card-front">
+                            <div class="team-img-wrapper">
+                                <img src="assets/CFO_Jonathan.jpg" alt="Jonathan Salim" class="team-img" onerror="this.src='https://placehold.co/400x530?text=Jonathan'">
+                            </div>
+                            <div class="team-info">
+                                <h4>Jonathan Salim</h4>
+                                <span class="role">Chief Finance Officer</span>
+                            </div>
+                        </div>
+                        <div class="team-card-back">
+                            <div class="back-content">
+                                <h4>Jonathan Salim (CFO)</h4>
+                                <p>Oversees financial strategy, budgeting, investment planning, and ensures the sustainable economic growth of the SmartNusa ecosystem.</p>
                             </div>
                         </div>
                     </div>
